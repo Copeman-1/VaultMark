@@ -1,6 +1,6 @@
 # 🔐 VaultMark
 
-**Secure bookmark manager with bank-level AES-256 encryption**
+**Secure bookmark manager with AES-256 encryption**
 
 Made with ❤️ by Copeman
 
