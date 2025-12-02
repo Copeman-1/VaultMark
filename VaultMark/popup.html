@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VaultMark</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">🔐</span>
+          <div class="logo-text">
+            <h1>VaultMark</h1>
+            <span class="tagline">Made with ❤️ by Copeman</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" title="Toggle Dark Mode">🌙</button>
+          <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Bookmark Bar -->
+    <div class="quick-bookmark-bar">
+      <div class="current-page-info">
+        <div class="page-icon">🌐</div>
+        <div class="page-details">
+          <strong id="pageTitle">Loading...</strong>
+          <small id="pageUrl">...</small>
+        </div>
+      </div>
+      <button id="bookmarkBtn" class="btn-bookmark">
+        <span class="icon">⭐</span>
+        Bookmark
+      </button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search bookmarks...">
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button id="selectAllBtn" class="btn-action">Select All</button>
+      <button id="deleteSelectedBtn" class="btn-action btn-danger" disabled>Delete Selected</button>
+    </div>
+
+    <!-- Categories List -->
+    <div id="categoriesList" class="categories-list">
+      <!-- Categories will be dynamically populated -->
+    </div>
+
+    <!-- Settings View (Hidden by default) -->
+    <div id="settingsView" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Settings</h2>
+          <button id="closeSettings" class="btn-close">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="autoCreateCategories" checked>
+              <span>Auto-create categories from domain names</span>
+            </label>
+          </div>
+          <div class="setting-item">
+            <label for="defaultCategory">Default category name:</label>
+            <input type="text" id="defaultCategory" value="Uncategorized" placeholder="Uncategorized">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="saveSettings" class="btn-primary">Save Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
